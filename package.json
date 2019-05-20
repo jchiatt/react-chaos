@@ -1,6 +1,6 @@
 {
   "name": "react-chaos",
-  "version": "0.0.1",
+  "version": "0.0.5",
   "description": "Chaos Engineering for your React applicatopins.",
   "main": "index.js",
   "scripts": {
