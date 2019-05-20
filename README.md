@@ -2,6 +2,13 @@
 
 Chaos Engineering for your React applications.
 
+## Pre-Installation Notes
+
+- This is currently WIP and a proof-of-concept.
+- There is nothing in place to help ensure good performance practices. Use at your own risk.
+- Nested components are not yet supported. Currently, only the immediate children wrapped with `<Chaos>` will have the potential for Chaos.
+- Components that return functions / render props are not yet supported.
+
 ## Installation
 
 ```
