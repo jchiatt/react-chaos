@@ -1,7 +1,7 @@
 {
   "name": "react-chaos",
   "version": "0.0.5",
-  "description": "Chaos Engineering for your React applicatopins.",
+  "description": "Chaos Engineering for your React applications.",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
