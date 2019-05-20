@@ -1,0 +1,27 @@
+{
+  "name": "react-chaos",
+  "version": "0.0.1",
+  "description": "Chaos Engineering for your React applicatopins.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jchiatt/react-chaos.git"
+  },
+  "keywords": [
+    "testing",
+    "chaos",
+    "error",
+    "boundaries",
+    "UI",
+    "testing"
+  ],
+  "author": "J.C. Hiatt",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jchiatt/react-chaos/issues"
+  },
+  "homepage": "https://github.com/jchiatt/react-chaos#readme"
+}
