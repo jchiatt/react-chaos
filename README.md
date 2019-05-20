@@ -2,7 +2,7 @@
 
 Chaos Engineering for your React applications.
 
-## Why
+## ❓ Why
 
 - Because simple UI errors shouldn't bring down your app.
 - This library can help expose areas of your component tree that don't handle errors very gracefully. Used in conjunction with [Error Boundaries](https://reactjs.org/docs/error-boundaries.html), this can be a powerful tool to improve the resiliency of your UI components.
@@ -14,13 +14,13 @@ Chaos Engineering for your React applications.
 - Nested components are not yet supported. Currently, only the immediate children wrapped with `<Chaos>` will have the potential for Chaos.
 - Components that return functions / render props are not yet supported.
 
-## Installation
+## 💻 Installation
 
 ```
 npm i --save-dev react-chaos
 ```
 
-## Usage
+## 💥 Usage
 
 First, import the Chaos:
 
@@ -50,6 +50,16 @@ You can optionally set a Chaos level between 1 and 10 (the higher the number, th
 
 Note: The default Chaos level is 5. This means that for each child component inside `Chaos`, there is a 50% chance Chaos will occur (respectively).
 
-## Other Notes
+## 📝 Other Notes
 
 - Inspired by [Brandon Dail's post on React Error Boundaries and Fault Tolerance](https://aweary.dev/fault-tolerance-react/).
+
+## TODO:
+
+- Add tests
+- Support chaos levels on a per-component basis
+- Support custom chaos messages on a per-component basis
+- Support components that return functions
+- Support nested components
+- Performance improvements
+- Ensure this can't run in production unless explicitly set to do so
