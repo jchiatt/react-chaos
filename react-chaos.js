@@ -1,10 +1,23 @@
 import React from "react";
 
+/**
+ * Public API
+ */
+export default function Chaos({ children, level }) {
+  React.Children.forEach(children, () => {
+    CreateChaos(level);
+  });
+  return children;
+}
+
+/**
+ * Private
+ */
 function CreateChaos(level = 5) {
   const chaosLevel = level !== 5 ? convertChaosLevel(level) : 0.5;
   const chaosOn = Math.random() >= chaosLevel;
   if (chaosOn) {
-    throw new Error("CHAOS 🔥🔥🔥");
+    throw new Error("CHAOS");
   }
 }
 
@@ -36,12 +49,3 @@ function convertChaosLevel(level) {
       );
   }
 }
-
-export function Chaos({ children, level }) {
-  React.Children.forEach(children, () => {
-    CreateChaos(level);
-  });
-  return children;
-}
-
-export default Chaos;
