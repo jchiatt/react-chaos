@@ -53,6 +53,7 @@ Note: The default Chaos level is 5. This means that for each child component ins
 ## 📝 Other Notes
 
 - Inspired by [Brandon Dail's post on React Error Boundaries and Fault Tolerance](https://aweary.dev/fault-tolerance-react/).
+- Also inspired by watching Jurassic Park the night before writing this.
 
 ## TODO:
 
