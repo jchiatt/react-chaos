@@ -1,26 +1,24 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <ComponentOne />
+      <ComponentTwo />
+      <ComponentThree />
+    </>
   );
+}
+
+function ComponentOne() {
+  return <h1>Component One</h1>
+}
+
+function ComponentTwo() {
+  return <h1>Component Two</h1>
+}
+function ComponentThree() {
+  return <h1>Component Three</h1>
 }
 
 export default App;
