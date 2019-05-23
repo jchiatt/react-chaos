@@ -15,7 +15,18 @@ function App() {
   );
 }
 
-const Fallback = () => <h1>Error</h1>
+const Fallback = () => <div style={{ 
+  height: 80,
+  backgroundColor: 'yellow',
+  color: '#333',
+  fontSize: '3rem',
+  fontWeight: 700
+  }}
+>
+  <span role="img" aria-label="fire emoji.">🔥</span>
+  <span> Error </span>
+  <span role="img" aria-label="fire emoji.">🔥</span>
+</div>
 
 const GenericComponent = ({ text }) => <h1>Component {text}</h1>
 
@@ -23,7 +34,7 @@ const NestedComponent = ({ children }) => children;
 
 const ComponentOne = () => <GenericComponent text="One" />
 
-const ComponentOneWithChaos = withChaos(ComponentOne, 10, "a custom error message");
+const ComponentOneWithChaos = withChaos(ComponentOne, 3, "a custom error message");
 
 const ComponentTwo = () => <GenericComponent text="Two" />
 
