@@ -1,17 +1,14 @@
 import React from 'react';
-import { createChaos } from './createChaos'
+import Chaos from './index'
 
-const withChaos = (WrappedComponent) => {
+const withChaos = (WrappedComponent, level, errorMessage) => {
   return class extends React.Component {
-    componentWillMount() {
-      createChaos();
-    }
     
     render() {
       return (
-        <WrappedComponent
-          {...this.props}
-        />
+        <Chaos level={level} errorMessage={errorMessage}>
+          <WrappedComponent {...this.props} />
+        </Chaos>
       );
     }
   }

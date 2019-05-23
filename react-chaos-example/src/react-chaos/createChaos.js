@@ -1,9 +1,10 @@
-export function createChaos(level = 5) {
+export function createChaos(level = 5, errorMessage = "🐵 CHAOS 🐵") {
   const chaosLevel = level !== 5 ? convertChaosLevel(level) : 0.5;
   const chaosOn = Math.random() >= chaosLevel;
   if (chaosOn) {
-    throw new Error("CHAOS");
+    throw new Error(errorMessage);
   }
+  return false;
 }
 
 function convertChaosLevel(level) {

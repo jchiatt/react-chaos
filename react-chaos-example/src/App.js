@@ -5,45 +5,34 @@ import ErrorBoundary from './react-chaos/ErrorBoundary';
 function App() {
   return (
     <>
-      <ComponentOneWithChaosAndBoundary />
+      <ComponentOne />
+      <ErrorBoundary fallback={<Fallback />}>
+        <ComponentOneWithChaos />
+      </ErrorBoundary>
       <ComponentTwo />
       <ComponentThree />
     </>
   );
 }
 
-const Fallback = () => <h1 color="red">Error</h1>
+const Fallback = () => <h1>Error</h1>
 
-function GenericComponent({ text }) {
-  return <h1>Component {text}</h1>
-}
+const GenericComponent = ({ text }) => <h1>Component {text}</h1>
 
-function NestedComponent({ children }) {
-  return children;
-}
+const NestedComponent = ({ children }) => children;
 
-function ComponentOne() {
-  return <GenericComponent text="One" />
-}
+const ComponentOne = () => <GenericComponent text="One" />
 
-const ComponentOneWithChaos = withChaos(ComponentOne);
-const ComponentOneWithChaosAndBoundary = () => (
-  <ErrorBoundary fallback={<Fallback />}>
-    <ComponentOneWithChaos />
-  </ErrorBoundary>
+const ComponentOneWithChaos = withChaos(ComponentOne, 1, "a custom error message");
+
+const ComponentTwo = () => <GenericComponent text="Two" />
+
+const ComponentThree = () => (
+  <NestedComponent>
+    <GenericComponent text="Three" />
+    <GenericComponent text="Four" />
+  </NestedComponent>
 )
 
-function ComponentTwo() {
-  return <GenericComponent text="Two" />
-}
-
-function ComponentThree() {
-  return (
-    <NestedComponent>
-      <GenericComponent text="Three" />
-      <GenericComponent text="Four" />
-    </NestedComponent>
-  )
-}
 
 export default App;

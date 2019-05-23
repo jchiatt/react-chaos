@@ -1,13 +1,8 @@
-import React from "react";
 import { createChaos } from './createChaos';
 
 /**
  * Public API
  */
-export default function Chaos({ children, level }) {
-  React.Children.forEach(children, () => {
-    createChaos(level);
-  });
-  
-  return children || null;
+export default function Chaos({ children, level, errorMessage }) {
+  return createChaos(level, errorMessage) || children;
 }
