@@ -5,6 +5,10 @@ import ErrorBoundary from './react-chaos/ErrorBoundary';
 function App() {
   return (
     <>
+      <button onClick={() => {
+        // eslint-disable-next-line
+        location.reload()
+      }}>Reload</button>
       <ComponentOne />
       <ErrorBoundary fallback={<Fallback />}>
         <ComponentOneWithChaos />
@@ -16,7 +20,7 @@ function App() {
 }
 
 const Fallback = () => <div style={{ 
-  height: 80,
+  height: '4rem',
   backgroundColor: 'yellow',
   color: '#333',
   fontSize: '3rem',
