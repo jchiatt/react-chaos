@@ -11,7 +11,7 @@ function App() {
       }}>Reload</button>
       <ComponentOne />
       <ErrorBoundary fallback={<Fallback />}>
-        <ComponentOneWithChaos />
+        <ComponentWithChaos />
       </ErrorBoundary>
       <ComponentTwo />
       <ComponentThree />
@@ -38,7 +38,9 @@ const NestedComponent = ({ children }) => children;
 
 const ComponentOne = () => <GenericComponent text="One" />
 
-const ComponentOneWithChaos = withChaos(ComponentOne, 3, "a custom error message");
+const ComponentWillHaveChaos = () => <GenericComponent text="may experience chaos." />
+
+const ComponentWithChaos = withChaos(ComponentWillHaveChaos, 3, "a custom error message");
 
 const ComponentTwo = () => <GenericComponent text="Two" />
 
