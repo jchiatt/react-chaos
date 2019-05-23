@@ -23,7 +23,7 @@ const NestedComponent = ({ children }) => children;
 
 const ComponentOne = () => <GenericComponent text="One" />
 
-const ComponentOneWithChaos = withChaos(ComponentOne, null, "a custom error message");
+const ComponentOneWithChaos = withChaos(ComponentOne, 10, "a custom error message");
 
 const ComponentTwo = () => <GenericComponent text="Two" />
 
