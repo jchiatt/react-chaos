@@ -1,6 +1,6 @@
 import React from 'react';
-import withChaos from './react-chaos/withChaos'
-import ErrorBoundary from './react-chaos/ErrorBoundary';
+import withChaos from 'react-chaos'
+import ErrorBoundary from 'react-chaos';
 
 function App() {
   return (
