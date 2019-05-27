@@ -1,5 +1,12 @@
 sudo: false
 
+cache:
+  directories:
+    - ~/.npm
+
+notifications:
+  email: false
+
 language: node_js
 node_js:
   - 8
@@ -10,6 +17,8 @@ before_install:
 after_success:
   - cat ./coverage/lcov.info | ./node_modules/codecov.io/bin/codecov.io.js
   - cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js
+  - npm run build
+  - npm run travis-deploy-once "npm run semantic-release"
 
 branches:
   only:
