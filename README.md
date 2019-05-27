@@ -68,9 +68,9 @@ Note: The default Chaos level is 5. This means that for each child component ins
 
 ## TODO:
 
-- Add tests
-- Support chaos levels on a per-component basis
-- Support custom chaos messages on a per-component basis
+- Add tests [In Progress]
+- Support chaos levels on a per-component basis [In Progress]
+- Support custom chaos messages on a per-component basis [In Progress]
 - Support components that return functions
 - Support nested components
 - Performance improvements
