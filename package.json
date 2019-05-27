@@ -47,7 +47,7 @@
     "nwb": "0.23.x",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
-    "semantic-release": "^15.13.12",
+    "semantic-release": "^15.13.14",
     "travis-deploy-once": "^5.0.7"
   }
 }
