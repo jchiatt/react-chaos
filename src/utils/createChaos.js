@@ -1,5 +1,5 @@
-export function createChaos(level = 5, errorMessage = "🐵 CHAOS 🐵") {
-  if ( process.env.NODE_ENV === 'production' ) {
+export function createChaos(level = 5, errorMessage = "🐵 CHAOS 🐵", runInProduction = false) {
+  if ( process.env.NODE_ENV === 'production' && !runInProduction ) {
     /** Chaos will not occur in production. */
     return false;
   }

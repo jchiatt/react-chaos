@@ -27,7 +27,7 @@ Chaos Engineering for your React applications.
 
 ## 💻 Installation
 
-```
+```js
 npm i --save-dev react-chaos
 ```
 
@@ -35,27 +35,44 @@ npm i --save-dev react-chaos
 
 First, import the Chaos:
 
-```
-import withChaos from 'react-chaos';
+```js
+import withChaos from "react-chaos";
 ```
 
 Wrap any component with the Chaos:
 
-```
-const ComponentToWrap = () => <p>I may have chaos.</p>
+```js
+const ComponentToWrap = () => <p>I may have chaos.</p>;
 
 const ComponentWithChaos = withChaos(ComponentToWrap);
 ```
 
 You can optionally set a Chaos level between 1 and 10 (the higher the number, the more Chaos 😈) as well as a custom error message:
 
-```
+```js
 const ComponentWithChaos = withChaos(ComponentToWrap);
 
-const ComponentWithChaos = withChaos(ComponentToWrap, 10, "This error message will almost certainly be shown since we are at Chaos level 10.");
+const ComponentWithChaos = withChaos(
+  ComponentToWrap,
+  10,
+  "This error message will almost certainly be shown since we are at Chaos level 10."
+);
 ```
 
 Note: The default Chaos level is 5.
+
+## 🐒 Chaos in Production
+
+By default, React Chaos _will not_ run in production. If you want to override this by passing in `true` as a 4th parameter like this:
+
+```js
+const ComponentWithChaos2 = withChaos(
+  ComponentWillHaveChaos2,
+  3,
+  "a custom error message, level 3",
+  true
+);
+```
 
 ## 📝 Other Notes
 
