@@ -22,7 +22,7 @@ Chaos Engineering for your React applications.
 
 - This is currently WIP and a proof-of-concept.
 - There is nothing in place to help ensure good performance practices. Use at your own risk.
-- Nested components are not yet supported. Currently, only the immediate children wrapped with `<Chaos>` will have the potential for Chaos.
+- Nested components are not yet supported. Currently, only the immediate children wrapped with `withChaos` will have the potential for Chaos.
 - Components that return functions / render props are not yet supported.
 
 ## 💻 Installation
@@ -67,6 +67,7 @@ Note: The default Chaos level is 5.
 - Add tests [In Progress]
 - Support chaos levels on a per-component basis [In Progress]
 - Support custom chaos messages on a per-component basis [In Progress]
+- Support wrapping wrapping each immediate child once but specifying a different chaos level for each. [In Progress]
 - Support components that return functions
 - Support nested components
 - Performance improvements
