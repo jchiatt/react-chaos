@@ -1,5 +1,5 @@
 export function createChaos(level = 5, errorMessage = "🐵 CHAOS 🐵") {
-  if ( level === null || level === undefined || typeof level !== 'number') {
+  if (level === null || level === undefined || typeof level !== 'number') {
     level = 5;
   }
   
