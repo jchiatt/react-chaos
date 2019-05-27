@@ -2,10 +2,10 @@ import expect from 'expect'
 import React from 'react'
 import {render, unmountComponentAtNode} from 'react-dom'
 
-import Component from 'src/'
-
-describe('Component', () => {
+describe('Chaos renders', () => {
   let node
+  const TestComponent = () => <h1>Test</h1>
+
 
   beforeEach(() => {
     node = document.createElement('div')
@@ -15,9 +15,11 @@ describe('Component', () => {
     unmountComponentAtNode(node)
   })
 
-  it('displays a welcome message', () => {
-    render(<Component/>, node, () => {
-      expect(node.innerHTML).toContain('Welcome to React components')
+  it('always passes this test', () => {
+    render(<TestComponent />, node, () => {
+      expect(node.innerHTML).toContain('Test')
     })
   })
 })
+
+
