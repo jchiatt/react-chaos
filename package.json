@@ -44,10 +44,11 @@
     "react": "16.x"
   },
   "devDependencies": {
+    "coveralls": "^3.0.3",
     "nwb": "0.23.x",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
-    "travis-deploy-once": "^5.0.7",
-    "semantic-release": "^15.13.12"
+    "semantic-release": "^15.13.12",
+    "travis-deploy-once": "^5.0.7"
   }
 }
