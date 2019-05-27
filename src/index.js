@@ -1,5 +1,5 @@
 import React from 'react';
-import { Chaos } from './react-chaos/Chaos'
+import { Chaos } from './components/Chaos'
 
 const withChaos = (WrappedComponent, level, errorMessage) => {
   return class extends React.Component {

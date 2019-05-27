@@ -1,4 +1,4 @@
-import { createChaos } from './createChaos';
+import { createChaos } from '../utils/createChaos';
 
 /**
  * Public API
