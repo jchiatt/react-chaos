@@ -15,6 +15,7 @@ before_install:
   - npm install codecov.io coveralls
 
 after_success:
+  - npm run test:coverage
   - cat ./coverage/lcov.info | ./node_modules/codecov.io/bin/codecov.io.js
   - cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js
   - npm run build
