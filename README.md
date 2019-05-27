@@ -61,14 +61,3 @@ Note: The default Chaos level is 5.
 
 - Inspired by [Brandon Dail's post on React Error Boundaries and Fault Tolerance](https://aweary.dev/fault-tolerance-react/).
 - Also inspired by watching Jurassic Park the night before writing this.
-
-## TODO:
-
-- Add tests [In Progress]
-- Support chaos levels on a per-component basis [In Progress]
-- Support custom chaos messages on a per-component basis [In Progress]
-- Support wrapping wrapping each immediate child once but specifying a different chaos level for each. [In Progress]
-- Support components that return functions
-- Support nested components
-- Performance improvements
-- Ensure this can't run in production unless explicitly set to do so
