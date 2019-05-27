@@ -44,6 +44,8 @@
     "react": "16.x"
   },
   "devDependencies": {
+    "babel-jest": "^24.8.0",
+    "jest": "^24.8.0",
     "nwb": "0.23.x",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
