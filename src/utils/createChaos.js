@@ -1,4 +1,9 @@
 export function createChaos(level = 5, errorMessage = "🐵 CHAOS 🐵") {
+  if ( process.env.NODE_ENV === 'production' ) {
+    /** Chaos will not occur in production. */
+    return false;
+  }
+
   if (level === null || level === undefined || typeof level !== 'number') {
     level = 5;
   }

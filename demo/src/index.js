@@ -40,7 +40,13 @@ const NestedComponent = ({ children }) => children;
 const ComponentOne = () => <GenericComponent text="One" />
 
 const ComponentWillHaveChaos = () => <GenericComponent text="may experience chaos." />
-const ComponentWillHaveChaos2 = () => <GenericComponent text="may also experience chaos." />
+const ComponentWillHaveChaos2 = () => (
+  <NestedComponent>
+    <GenericComponent text="may also experience chaos 1." />
+    <GenericComponent text="may also experience chaos 2." />
+    <GenericComponent text="may also experience chaos 3." />
+  </NestedComponent>
+);
 
 const ComponentWithChaos = withChaos(ComponentWillHaveChaos, 1, "a custom error message, level 1");
 const ComponentWithChaos2 = withChaos(ComponentWillHaveChaos2, 3, "a custom error message, level 3");
