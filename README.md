@@ -6,12 +6,12 @@
 
 Chaos Engineering for your React applications.
 
-[build-badge]: https://img.shields.io/travis/user/repo/master.png?style=flat-square
-[build]: https://travis-ci.org/user/repo
+[build-badge]: https://img.shields.io/travis/jchiatt/react-chaos/master.png?style=flat-square
+[build]: https://travis-ci.org/jchiatt/react-chaos
 [npm-badge]: https://img.shields.io/npm/v/npm-package.png?style=flat-square
 [npm]: https://www.npmjs.org/package/react-chaos
-[coveralls-badge]: https://img.shields.io/coveralls/user/repo/master.png?style=flat-square
-[coveralls]: https://coveralls.io/github/user/repo
+[coveralls-badge]: https://img.shields.io/coveralls/jchiatt/react-chaos/master.png?style=flat-square
+[coveralls]: https://coveralls.io/github/jchiatt/react-chaos
 
 ## ❓ Why
 
