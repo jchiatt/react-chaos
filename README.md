@@ -10,8 +10,8 @@ Chaos Engineering for your React applications.
 [build]: https://travis-ci.org/jchiatt/react-chaos
 [npm-badge]: https://img.shields.io/npm/v/npm-package.png?style=flat-square
 [npm]: https://www.npmjs.org/package/react-chaos
-[coveralls-badge]: https://img.shields.io/coveralls/jchiatt/react-chaos/master.png?style=flat-square
-[coveralls]: https://coveralls.io/github/jchiatt/react-chaos
+[coveralls-badge]: https://coveralls.io/repos/github/jchiatt/react-chaos/badge.svg?branch=master
+[coveralls]: https://coveralls.io/github/jchiatt/react-chaos?branch=master
 
 ## ❓ Why
 
