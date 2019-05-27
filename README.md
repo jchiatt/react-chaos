@@ -1,4 +1,4 @@
-# 🔥🐒 React Chaos
+# 🔥🐒💥 React Chaos
 
 [![Travis][build-badge]][build]
 [![npm package][npm-badge]][npm]
