@@ -36,30 +36,26 @@ npm i --save-dev react-chaos
 First, import the Chaos:
 
 ```
-import Chaos from 'react-chaos';
+import withChaos from 'react-chaos';
 ```
 
-Wrap any part(s) of your component tree with the Chaos:
+Wrap any component with the Chaos:
 
 ```
-<Chaos>
-  <ComponentOne />
-  <ComponentTwo />
-  <ComponentThree />
-</Chaos>
+const ComponentToWrap = () => <p>I may have chaos.</p>
+
+const ComponentWithChaos = withChaos(ComponentToWrap);
 ```
 
-You can optionally set a Chaos level between 1 and 10 (the higher the number, the more Chaos 😈):
+You can optionally set a Chaos level between 1 and 10 (the higher the number, the more Chaos 😈) as well as a custom error message:
 
 ```
-<Chaos level={5}>
-  <ComponentOne />
-  <ComponentTwo />
-  <ComponentThree />
-</Chaos>
+const ComponentWithChaos = withChaos(ComponentToWrap);
+
+const ComponentWithChaos = withChaos(ComponentToWrap, 10, "This error message will almost certainly be shown since we are at Chaos level 10.");
 ```
 
-Note: The default Chaos level is 5. This means that for each child component inside `Chaos`, there is a 50% chance Chaos will occur (respectively).
+Note: The default Chaos level is 5.
 
 ## 📝 Other Notes
 
