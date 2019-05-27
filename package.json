@@ -2,9 +2,22 @@
   "name": "react-chaos",
   "version": "0.0.7",
   "description": "Chaos Engineering for your React applications.",
-  "main": "index.js",
+  "main": "lib/index.js",
+  "module": "es/index.js",
+  "files": [
+    "css",
+    "es",
+    "lib",
+    "umd"
+  ],
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "nwb build-react-component",
+    "clean": "nwb clean-module && nwb clean-demo",
+    "prepublishOnly": "npm run build",
+    "start": "nwb serve-react-demo",
+    "test": "nwb test-react",
+    "test:coverage": "nwb test-react --coverage",
+    "test:watch": "nwb test-react --server"
   },
   "repository": {
     "type": "git",
@@ -19,12 +32,18 @@
     "testing"
   ],
   "author": "J.C. Hiatt",
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/jchiatt/react-chaos/issues"
   },
   "homepage": "https://github.com/jchiatt/react-chaos#readme",
-  "dependencies": {
-    "react": "^16.8.6"
+  "dependencies": {},
+  "peerDependencies": {
+    "react": "16.x"
+  },
+  "devDependencies": {
+    "nwb": "0.23.x",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6"
   }
 }

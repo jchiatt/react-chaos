@@ -2,7 +2,7 @@ export function createChaos(level = 5, errorMessage = "🐵 CHAOS 🐵") {
   if (level === null || level === undefined || typeof level !== 'number') {
     level = 5;
   }
-  
+
   const chaosLevel = level !== 5 ? convertChaosLevel(level) : 0.5;
   const chaosOn = Math.random() >= chaosLevel;
   if (chaosOn) {

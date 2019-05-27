@@ -1,10 +1,11 @@
-import React from 'react';
-import withChaos from 'react-chaos'
-import ErrorBoundary from 'react-chaos';
+import React from 'react'
+import withChaos from '../../src/index'
+import { render } from 'react-dom'
+import ErrorBoundary from '../../src/components/ErrorBoundary';
 
-function App() {
+function Demo() {
   return (
-    <>
+    <React.Fragment>
       <button onClick={() => {
         // eslint-disable-next-line
         location.reload()
@@ -15,17 +16,17 @@ function App() {
       </ErrorBoundary>
       <ComponentTwo />
       <ComponentThree />
-    </>
+    </React.Fragment>
   );
 }
 
-const Fallback = () => <div style={{ 
+const Fallback = () => <div style={{
   height: '4rem',
   backgroundColor: 'yellow',
   color: '#333',
   fontSize: '3rem',
   fontWeight: 700
-  }}
+}}
 >
   <span role="img" aria-label="fire emoji.">🔥</span>
   <span> Error </span>
@@ -57,5 +58,4 @@ const ComponentThree = () => (
   </NestedComponent>
 )
 
-
-export default App;
+render(<Demo />, document.querySelector('#demo'))
