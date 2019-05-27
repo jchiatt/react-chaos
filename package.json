@@ -44,7 +44,6 @@
     "react": "16.x"
   },
   "devDependencies": {
-    "coveralls": "^3.0.3",
     "nwb": "0.23.x",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
