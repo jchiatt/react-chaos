@@ -7,7 +7,7 @@ export function createChaos(level = 5, errorMessage = "🐵 CHAOS 🐵", runInPr
   }
 
   if (typeof level !== 'number') {
-    throw new Error('Please provide a number level. You provided string');
+    throw new Error(`Please provide a number level. You provided: ${typeof level}`);
   }
 
   const chaosLevel = level !== 5 ? convertChaosLevel(level) : 0.5;

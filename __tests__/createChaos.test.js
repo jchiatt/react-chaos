@@ -5,7 +5,7 @@ const mockMath = (val) => {
   let mr = Math.random;
   Math.random = () => val;
   return () => {
-    Math.random = mr;
+      Math.random = mr;
   }
 }
 
@@ -19,17 +19,17 @@ describe('createChaos function', () => {
   
   test('cannot be called with a string for a level', () => {
     expect(() => createChaos('10')).toThrow();
-  })
+  });
 
   test('should throw if random is higher than level', () => {
     let restore = mockMath(6);
     expect(() => createChaos(5)).toThrow();
     restore();
-  })
+  });
 
   test('should not throw if random is less than level', () => {
     let restore = mockMath(0.4);
     expect(createChaos(5)).toEqual(false);
     restore();
-  })
-})
+  });
+});
