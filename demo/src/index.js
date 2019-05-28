@@ -28,9 +28,7 @@ const Fallback = () => <div style={{
   fontWeight: 700
 }}
 >
-  <span role="img" aria-label="fire emoji.">🔥</span>
-  <span> Error </span>
-  <span role="img" aria-label="fire emoji.">🔥</span>
+  <span> I'm handling the error gracefully. 💅 </span>
 </div>
 
 const GenericComponent = ({ text }) => <h1>Component {text}</h1>
