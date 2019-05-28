@@ -74,7 +74,8 @@ const ComponentWithChaos2 = withChaos(
 );
 ```
 
-## 📝 Other Notes
+## ❣️Inspiration
 
-- Inspired by [Brandon Dail's post on React Error Boundaries and Fault Tolerance](https://aweary.dev/fault-tolerance-react/).
-- Also inspired by watching Jurassic Park the night before writing this.
+- [Brandon Dail's post on React Error Boundaries and Fault Tolerance](https://aweary.dev/fault-tolerance-react/)
+- [Brian Holt's talk on Chaos Engineering in the Browser](https://www.youtube.com/watch?v=A4_rRj-4Mv0)
+- Also inspired by watching Jurassic Park the night before writing this
