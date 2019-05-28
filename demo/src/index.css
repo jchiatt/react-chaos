@@ -1,0 +1,66 @@
+.button {
+  position: absolute;
+  top: 2rem;
+  left: 1rem;
+  width: 180px;
+  padding: 1rem;
+  background-color: palevioletred;
+  color: white;
+  font-size: 1rem;
+  font-weight: 700;
+  font-family: Arial;
+}
+
+.button:hover {
+  cursor: pointer;
+  background-color: goldenrod;
+}
+
+.header {
+  color: #333;
+  font-family: monospace;
+  font-size: 2rem;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: calc(100vh - 8rem);
+  width: 100vw;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 1rem;
+  padding: 0.25rem;
+}
+
+.child {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 480px;
+  height: 480px;
+  margin: 1rem;
+  padding: 0.5rem;
+  font-size: 1.5rem;
+}
+
+.one {
+  background-color: peru;
+}
+
+.two {
+  background-color: papayawhip;
+}
+
+.three {
+  background-color: peachpuff;
+}

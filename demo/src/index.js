@@ -2,36 +2,47 @@ import React from 'react'
 import withChaos from '../../src/index'
 import { render } from 'react-dom'
 import ErrorBoundary from '../../src/components/ErrorBoundary';
+import './index.css';
 
 function Demo() {
   return (
     <React.Fragment>
-      <button onClick={() => {
-        // eslint-disable-next-line
-        location.reload()
-      }}>Reload</button>
-      <ComponentOne />
-      <ErrorBoundary fallback={<Fallback />}>
-        <ComponentWithChaos />
-      </ErrorBoundary>
-      <ComponentTwo />
-      <ComponentThree />
+      <div className="header">
+        <h1>🔥🐒💥 React Chaos</h1>
+      </div>
+      <button className="button" onClick={() => {
+          // eslint-disable-next-line
+          location.reload()
+        }}>Reload</button>
+      <div className="wrapper">
+        <div className="container child one">
+          <ComponentOne />
+          <ErrorBoundary fallback={<Fallback />}>
+            <ComponentWithChaos />
+          </ErrorBoundary>
+        </div>
+        <div className="container child two">
+          <ComponentTwo />
+        </div>
+        <div className="container child three">
+          <ComponentThree />
+        </div>
+      </div>
     </React.Fragment>
   );
 }
 
 const Fallback = () => <div style={{
-  height: '4rem',
   backgroundColor: 'yellow',
   color: '#333',
-  fontSize: '3rem',
+  fontSize: '2rem',
   fontWeight: 700
 }}
 >
   <span> I'm handling the error gracefully. 💅 </span>
 </div>
 
-const GenericComponent = ({ text }) => <h1>Component {text}</h1>
+const GenericComponent = ({ text }) => <pre>Component {text}</pre>
 
 const NestedComponent = ({ children }) => children;
 

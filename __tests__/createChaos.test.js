@@ -1,5 +1,5 @@
-import expect from 'expect'
-import { createChaos } from '../src/utils/createChaos'
+import expect from 'expect';
+import { createChaos } from '../src/utils/createChaos';
 
 const mockMath = (val) => {
   let mr = Math.random;
