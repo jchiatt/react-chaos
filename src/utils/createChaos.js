@@ -28,7 +28,7 @@ function convertChaosLevel(level) {
   if ( level === 10 ) {
     level = .95;
   } else {
-    level = (level/100).toFixed(2);
+    level = (level / 10).toFixed(2);
   }
 
   return interpolate(1, 0, level)
