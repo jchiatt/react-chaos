@@ -23,6 +23,9 @@ function Demo() {
         </div>
         <div className="container child two">
           <ComponentTwo />
+          <ErrorBoundary fallback={<Fallback />}>
+            <ComponentWithChaos3 />
+          </ErrorBoundary>
         </div>
         <div className="container child three">
           <ComponentThree />
@@ -57,10 +60,11 @@ const ComponentWillHaveChaos2 = () => (
   </NestedComponent>
 );
 
-const ComponentWithChaos = withChaos(ComponentWillHaveChaos, 1, "a custom error message, level 1");
-const ComponentWithChaos2 = withChaos(ComponentWillHaveChaos2, 3, "a custom error message, level 3");
+const ComponentWithChaos = withChaos(ComponentWillHaveChaos, 1, "a custom error message, level 1", true);
+const ComponentWithChaos2 = withChaos(ComponentWillHaveChaos2, 3, "a custom error message, level 3", true);
+const ComponentWithChaos3 = withChaos(ComponentWillHaveChaos2, 5, "a custom error message, level 5", true);
 
-const ComponentTwo = () => <GenericComponent text="Two" />
+const ComponentTwo = () => (<GenericComponent text="Two" />)
 
 const ComponentThree = () => (
   <NestedComponent>
