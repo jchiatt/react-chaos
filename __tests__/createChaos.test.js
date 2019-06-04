@@ -1,5 +1,5 @@
 import expect from 'expect';
-import { createChaos } from '../src/utils/createChaos';
+import { createChaos, convertChaosLevel } from '../src/utils/createChaos';
 
 const mockMath = (val) => {
   let mr = Math.random;
@@ -33,3 +33,17 @@ describe('createChaos function', () => {
     restore();
   });
 });
+
+describe('convertChaosLevel function', () => {
+  test('should throw if supplied level is not a number', () => {
+    expect(() => convertChaosLevel('10')).toThrow();
+  })
+
+  test('should return .05 if 10 is passed in as chaos level', () => {
+    expect(convertChaosLevel(10)).toBe(0.050000000000000044);
+  })
+
+  test('should return 0.1 if 9 is passed in as chaos level', () => {
+    expect(convertChaosLevel(9)).toBe(0.09999999999999998);
+  })
+})

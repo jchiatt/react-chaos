@@ -18,7 +18,7 @@ export function createChaos(level = 5, errorMessage = "🐵 CHAOS 🐵", runInPr
   return false;
 }
 
-function convertChaosLevel(level) {
+export function convertChaosLevel(level) {
   if ( typeof level !== 'number' ) {
     throw new Error(
       "Unable to read your chaos level, please only pass in an integer between 1 and 10."
