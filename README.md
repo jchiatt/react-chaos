@@ -36,7 +36,7 @@ npm i --save-dev react-chaos
 First, import the Chaos:
 
 ```js
-import withChaos from "react-chaos";
+import withChaos from 'react-chaos';
 ```
 
 Wrap any component with the Chaos:
@@ -55,7 +55,7 @@ const ComponentWithChaos = withChaos(ComponentToWrap);
 const ComponentWithChaos = withChaos(
   ComponentToWrap,
   10,
-  "This error message will almost certainly be shown since we are at Chaos level 10."
+  'This error message will almost certainly be shown since we are at Chaos level 10.'
 );
 ```
 
@@ -69,7 +69,7 @@ By default, React Chaos _will not_ run in production. If you want to override th
 const ComponentWithChaos2 = withChaos(
   ComponentWillHaveChaos2,
   3,
-  "a custom error message, level 3",
+  'a custom error message, level 3',
   true
 );
 ```
@@ -79,3 +79,7 @@ const ComponentWithChaos2 = withChaos(
 - [Brandon Dail's post on React Error Boundaries and Fault Tolerance](https://aweary.dev/fault-tolerance-react/)
 - [Brian Holt's talk on Chaos Engineering in the Browser](https://www.youtube.com/watch?v=A4_rRj-4Mv0)
 - Also inspired by watching Jurassic Park the night before writing this
+
+## Other Notes
+
+This project uses TSDX.
