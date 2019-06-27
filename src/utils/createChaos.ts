@@ -37,7 +37,7 @@ export function convertChaosLevel(level: Level): number {
   if (level === 10) {
     floatLevel = 0.95;
   } else {
-    floatLevel = (level / 10).toFixed(2);
+    floatLevel = parseFloat((level / 10).toFixed(2));
   }
 
   return interpolate(1, 0, floatLevel);
