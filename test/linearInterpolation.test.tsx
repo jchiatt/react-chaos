@@ -1,5 +1,5 @@
-import expect from 'expect'
-import { interpolate } from '../src/utils/linearInterpolation'
+import expect from 'expect';
+import { interpolate } from '../src/utils/linearInterpolation';
 
 describe('linerInterpolation function', () => {
   test('returns 0.7 if you pass in the number 3', () => {
