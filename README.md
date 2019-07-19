@@ -13,7 +13,11 @@ Chaos Engineering for your React applications.
 [coveralls-badge]: https://coveralls.io/repos/github/jchiatt/react-chaos/badge.svg?branch=master
 [coveralls]: https://coveralls.io/github/jchiatt/react-chaos?branch=master
 
-## ❓ Why
+## ❓ What It Does
+
+React Chaos is currently a higher order component that will randomly throw `Error`s in the component it wraps. The likelihood for the error to throw is based on a `level` you set when you wrap a component.
+
+## 🤔 Why
 
 - Because simple UI errors shouldn't bring down your app.
 - This library can help expose areas of your component tree that don't handle errors very gracefully. Used in conjunction with [Error Boundaries](https://reactjs.org/docs/error-boundaries.html), this can be a powerful tool to improve the resiliency of your UI components.
