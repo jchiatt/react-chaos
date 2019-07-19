@@ -22,8 +22,6 @@ Chaos Engineering for your React applications.
 
 - This is currently WIP and a proof-of-concept.
 - There is nothing in place to help ensure good performance practices. Use at your own risk.
-- Nested components are not yet supported. Currently, only the immediate children wrapped with `withChaos` will have the potential for Chaos.
-- Components that return functions / render props are not yet supported.
 
 ## 💻 Installation
 
