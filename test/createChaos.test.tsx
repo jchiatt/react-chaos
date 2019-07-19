@@ -1,7 +1,7 @@
 import expect from 'expect';
 import { createChaos, convertChaosLevel } from '../src/utils/createChaos';
 
-const mockMath = val => {
+const mockMath = (val: number) => {
   let mr = Math.random;
   Math.random = () => val;
   return () => {
