@@ -1,23 +1,13 @@
 # 🔥🐒💥 React Chaos
 
-[![Travis][build-badge]][build]
-[![npm package][npm-badge]][npm]
-[![Coveralls][coveralls-badge]][coveralls]
-
 Chaos Engineering for your React applications.
-
-[build-badge]: https://img.shields.io/travis/jchiatt/react-chaos/master.png?style=flat-square
-[build]: https://travis-ci.org/jchiatt/react-chaos
-[npm-badge]: https://img.shields.io/npm/v/npm-package.png?style=flat-square
-[npm]: https://www.npmjs.org/package/react-chaos
-[coveralls-badge]: https://coveralls.io/repos/github/jchiatt/react-chaos/badge.svg?branch=master
-[coveralls]: https://coveralls.io/github/jchiatt/react-chaos?branch=master
 
 ## What It Does
 
 React Chaos is currently a higher order component that will randomly throw `Error`s in the component it wraps. The likelihood for the error to throw is based on a `level` you set when you wrap a component.
 
 Blog post: [Announcing React Chaos](https://jchiatt.com/announcing-react-chaos/)
+Demo: [https://react-chaos.netlify.com/](https://react-chaos.netlify.com/)
 
 ## 🛑 Pre-Installation Notes
 
