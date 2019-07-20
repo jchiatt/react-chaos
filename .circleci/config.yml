@@ -1,0 +1,40 @@
+# Javascript Node CircleCI 2.0 configuration file
+#
+# Check https://circleci.com/docs/2.0/language-javascript/ for more details
+#
+version: 2
+jobs:
+  build:
+    docker:
+      # Node v10 Dubnium
+      - image: circleci/node:dubnium
+
+      # Specify service dependencies here if necessary
+      # CircleCI maintains a library of pre-built images
+      # documented at https://circleci.com/docs/2.0/circleci-images/
+      # - image: circleci/mongo:3.4.4
+
+    working_directory: ~/
+
+    steps:
+      - checkout
+      - run:
+          name: update-npm
+          command: 'sudo npm install -g npm@latest'
+
+      # Download and cache dependencies
+      - restore_cache:
+          keys:
+            - dependency-cache-{{ checksum "package.json" }}
+            # fallback to using the latest cache if no exact match is found
+            - dependency-cache-
+
+      - run: yarn install
+
+      - save_cache:
+          key: dependency-cache-{{ checksum "package.json" }}
+          paths:
+            - ~/node_modules
+
+      # run tests!
+      - run: yarn test
