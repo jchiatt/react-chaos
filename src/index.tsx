@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { Chaos } from './components/Chaos';
-import { Level } from 'types';
+import { Level } from './types';
 
 type WithChaosReturn = React.ComponentClass | (() => React.ReactElement);
 
