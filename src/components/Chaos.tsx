@@ -1,5 +1,5 @@
 import { createChaos } from '../utils/createChaos';
-import { Level } from 'types';
+import { Level } from '../types';
 
 /**
  * Public API

@@ -1,5 +1,5 @@
 import { interpolate } from './linearInterpolation';
-import { Level } from 'types';
+import { Level } from '../types';
 
 export function createChaos(
   level: Level = 5,
