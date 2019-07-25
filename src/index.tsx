@@ -2,13 +2,28 @@ import * as React from 'react';
 import { Chaos } from './components/Chaos';
 import { Level } from './types';
 import { createChaos } from './utils/createChaos';
+import { monkeyPatchReact } from './utils/monkeyPatchReact';
 
 export const initChaos = function initChaos(React: any) {
-  const originalCreateElement = React.createElement;
-  (React as any).createElement = function createElement(...args: any) {
-    createChaos(1, 'APP WIDE CHAOS YO 🐒');
-    return originalCreateElement.apply(React, args);
-  };
+  return monkeyPatchReact(React, {
+    createElement: function __chaosCreateElement(
+      originalCreateElement: any,
+      ...args: any
+    ) {
+      createChaos(1, 'APP WIDE CHAOS YO 🐒');
+      return originalCreateElement.apply(React, args);
+    },
+    // createElement: function patchCreateElement() {
+    //   const originalCreateElement = React.createElement;
+
+    //   return ((React as any).createElement = function createElement(
+    //     ...args: any
+    //   ) {
+    //     createChaos(1, 'APP WIDE CHAOS YO 🐒');
+    //     return originalCreateElement.apply(React, args);
+    //   });
+    // },
+  });
 };
 
 type WithChaosReturn = React.ComponentClass | (() => React.ReactElement);
