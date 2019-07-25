@@ -1,40 +1,20 @@
 import 'react-app-polyfill/ie11';
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
-import withChaos from '../src/index';
+import { withChaos, initChaos } from '../src/index';
+initChaos(React);
 import ErrorBoundary from '../src/components/ErrorBoundary';
 import './index.css';
 
 function Demo() {
   return (
     <React.Fragment>
-      <div className="header">
-        <h1>🔥🐒💥 React Chaos</h1>
-      </div>
-      <button
-        className="button"
-        onClick={() => {
-          // eslint-disable-next-line
-          location.reload();
-        }}
-      >
-        Reload
-      </button>
       <div className="wrapper">
         <div className="container child one">
           <ComponentOne />
           <ErrorBoundary fallback={<Fallback />}>
             <ComponentWithChaos />
           </ErrorBoundary>
-        </div>
-        <div className="container child two">
-          <ComponentTwo />
-          <ErrorBoundary fallback={<Fallback />}>
-            <ComponentWithChaos3 />
-          </ErrorBoundary>
-        </div>
-        <div className="container child three">
-          <ComponentThree />
         </div>
       </div>
     </React.Fragment>
@@ -54,53 +34,17 @@ const Fallback = () => (
   </div>
 );
 
-const GenericComponent = ({ text }) => <pre>Component {text}</pre>;
+const Text = ({ text }) => <pre>Component {text}</pre>;
 
-const NestedComponent = ({ children }) => children;
+const ComponentOne = () => <Text text="One" />;
 
-const ComponentOne = () => <GenericComponent text="One" />;
-
-const ComponentWillHaveChaos = () => (
-  <GenericComponent text="may experience chaos." />
-);
-const ComponentWillHaveChaos2 = () => (
-  <NestedComponent>
-    <GenericComponent text="may also experience chaos 1." />
-    <GenericComponent text="may also experience chaos 2." />
-    <GenericComponent text="may also experience chaos 3." />
-  </NestedComponent>
-);
+const ComponentMayHaveChaos = () => <Text text="may experience chaos." />;
 
 const ComponentWithChaos = withChaos(
-  ComponentWillHaveChaos,
-  1,
-  'a custom error message, level 1',
-  true
-);
-const ComponentWithChaos2 = withChaos(
-  ComponentWillHaveChaos2,
-  3,
-  'a custom error message, level 3',
-  true
-);
-const ComponentWithChaos3 = withChaos(
-  ComponentWillHaveChaos2,
+  ComponentMayHaveChaos,
   5,
   'a custom error message, level 5',
   true
-);
-
-const ComponentTwo = () => <GenericComponent text="Two" />;
-
-const ComponentThree = () => (
-  <NestedComponent>
-    <GenericComponent text="Three" />
-    <NestedComponent>
-      <ErrorBoundary fallback={<Fallback />}>
-        <ComponentWithChaos2 />
-      </ErrorBoundary>
-    </NestedComponent>
-  </NestedComponent>
 );
 
 ReactDOM.render(<Demo />, document.querySelector('#root'));
