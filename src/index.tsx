@@ -1,10 +1,19 @@
 import * as React from 'react';
 import { Chaos } from './components/Chaos';
 import { Level } from './types';
+import { createChaos } from './utils/createChaos';
+
+export const initChaos = function initChaos(React: any) {
+  const originalCreateElement = React.createElement;
+  (React as any).createElement = function createElement(...args: any) {
+    createChaos(1, 'APP WIDE CHAOS YO 🐒');
+    return originalCreateElement.apply(React, args);
+  };
+};
 
 type WithChaosReturn = React.ComponentClass | (() => React.ReactElement);
 
-const withChaos = (
+export const withChaos = (
   WrappedComponent: React.ElementType,
   level: Level,
   errorMessage?: string,
@@ -35,4 +44,4 @@ const withChaos = (
   };
 };
 
-export default withChaos;
+export default initChaos;
