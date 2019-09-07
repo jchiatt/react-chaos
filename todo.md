@@ -1,11 +1,10 @@
 # TODO
 
-## In Progress
+## 0.2.0
 
-- Add tests
-- Support chaos levels on a per-component basis
-- Support custom chaos messages on a per-component basis
-- Support wrapping wrapping each immediate child once but specifying a different chaos level for each.
+- Scale chaos level back - right now, the potential for chaos grows exponentially with every component added to the tree. Not good.
+- Write tests
+- Add a way for components to opt out of chaos (maybe a noChaos prop?)
 
 ## Planned
 
@@ -17,4 +16,4 @@
 - Support components that return functions
 - Support nested components
 - Performance improvements
-- Ensure this can't run in production unless explicitly set to do so
+- Support wrapping each immediate child once but specifying a different chaos level for each.
