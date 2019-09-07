@@ -14,7 +14,7 @@ const withChaos = (
     console.warn(
       `You tried to use React Chaos in production. You probably didn't mean to do this. Chaos will not occur in production.`
     );
-    return () => <WrappedComponent />;
+    return WrappedComponent;
   }
 
   if (process.env.NODE_ENV === 'production' && runInProduction) {
