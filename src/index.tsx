@@ -13,16 +13,6 @@ export const initChaos = function initChaos(React: any) {
       createChaos(1, 'APP WIDE CHAOS YO 🐒');
       return originalCreateElement.apply(React, args);
     },
-    // createElement: function patchCreateElement() {
-    //   const originalCreateElement = React.createElement;
-
-    //   return ((React as any).createElement = function createElement(
-    //     ...args: any
-    //   ) {
-    //     createChaos(1, 'APP WIDE CHAOS YO 🐒');
-    //     return originalCreateElement.apply(React, args);
-    //   });
-    // },
   });
 };
 
